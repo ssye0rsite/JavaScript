@@ -81,7 +81,7 @@ let diceObj = [
   let gameFinished;
   
   function diceRoll() {
-  // Executed when the roll button is clicked.
+  // when the roll button is clicked.
   
     rollCount++;
     scoreSubmitted = false;
@@ -89,7 +89,7 @@ let diceObj = [
       rollingState();
     }
   
-    // Assigns a random number to each dice. If a dice is held, no new number will be assigned.
+    // random number to each dice. If a dice is held, no new number.
     // Pushes the dice values to an array and sorts them numerically. For use in calculating scores.
     if (rollCount <= 3) {
       diceValueArray = [];
