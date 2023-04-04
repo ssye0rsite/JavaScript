@@ -249,6 +249,85 @@ let diceObj = [
     }
   }
   
+
+  // function calculateOnes() {
+  //   if (!scoreSubmitted && scoreSheet[0].ones === null) {
+  //     scoreSheet[0].ones = 0;
+  //     diceObj.forEach(item => {
+  //       if (item.currentValue === 1) {
+  //         scoreSheet[0].ones += 1;
+  //       }
+  //     });
+  //   onesScoreDisp.textContent = scoreSheet[0].ones;
+  //   calculationEnd(); 
+  //   }
+  // }
+  
+  // function calculateTwos() {
+  //   if (!scoreSubmitted && scoreSheet[0].twos === null) {
+  //     scoreSheet[0].twos = 0;
+  //     diceObj.forEach(item => {
+  //       if (item.currentValue === 2) {
+  //         scoreSheet[0].twos += 2;
+  //       }
+  //     });
+  //   twosScoreDisp.textContent = scoreSheet[0].twos;
+  //   calculationEnd();
+  //   }
+  // }
+  
+  // function calculateThrees() {
+  //   if (!scoreSubmitted && scoreSheet[0].threes === null) {
+  //     scoreSheet[0].threes = 0;
+  //     diceObj.forEach(item => {
+  //       if (item.currentValue === 3) {
+  //         scoreSheet[0].threes += 3;
+  //       }
+  //     });
+  //   threesScoreDisp.textContent = scoreSheet[0].threes;
+  //   calculationEnd(); 
+  //   }
+  // }
+  
+  // function calculateFours() {
+  //   if (!scoreSubmitted && scoreSheet[0].fours === null) {
+  //     scoreSheet[0].fours = 0;
+  //     diceObj.forEach(item => {
+  //       if (item.currentValue === 4) {
+  //         scoreSheet[0].fours += 4;
+  //       }
+  //     });
+  //   foursScoreDisp.textContent = scoreSheet[0].fours;
+  //   calculationEnd();
+  //   }
+  // }
+  
+  // function calculateFives() {
+  //   if (!scoreSubmitted && scoreSheet[0].fives === null) {
+  //     scoreSheet[0].fives = 0;
+  //     diceObj.forEach(item => {
+  //       if (item.currentValue === 5) {
+  //         scoreSheet[0].fives += 5;
+  //       }
+  //     });  
+  //   fivesScoreDisp.textContent = scoreSheet[0].fives;
+  //   calculationEnd();
+  //   }
+  // }
+  
+  // function calculateSixes() { 
+  //   if (!scoreSubmitted && scoreSheet[0].sixes === null) {
+  //     scoreSheet[0].sixes = 0;
+  //     diceObj.forEach(item => {
+  //       if (item.currentValue === 6) {
+  //         scoreSheet[0].sixes += 6;
+  //       }
+  //     });
+  //   sixesScoreDisp.textContent = scoreSheet[0].sixes;
+  //   calculationEnd();
+  //   }
+  // }
+
   
   function calculateThreeOfKind() {
     if (!scoreSubmitted && scoreSheet[1].threeOfAKind === null) {
@@ -441,7 +520,7 @@ let diceObj = [
       lowerGrandTotalDisp.textContent = scoreSheet[2].lowerGrandTotal;
     }
   
-    // If all of the scores are in, calculate & display the final score
+    // If all of the scores are in, calculate  display the final score
     if (scoreSheet[2].upperGrandTotal !== null && scoreSheet[2].lowerGrandTotal !== null) {
       scoreSheet[2].gameGrandTotal = scoreSheet[2].upperGrandTotal + scoreSheet[2].lowerGrandTotal;
       gameGrandTotalDisp.textContent = scoreSheet[2].gameGrandTotal;
