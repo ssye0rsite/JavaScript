@@ -11,8 +11,12 @@
 	justify-content: space-around;
 }
 
+#scoreSheet {
+	display: flex;
+}
+
 .dice {
-	border: 2px solid rgb(255, 0, 0);
+	border: 2px solid rgb(255, 0, 140);
 	border-radius: 10px;
 	width: 50px;
 	height: 50px;
@@ -48,10 +52,29 @@
 
 table {
 	margin: 0 auto;
+	
 }
 
 table, th, td {
-	border: 1px solid rgb(255, 0, 0);
+	border: 1px solid rgb(255, 0, 140);
+	border-collapse: collapse;
+ 	padding: 10px;
+}
+
+table, td {
+	text-align: center;
+}
+
+.scoreCell {
+	cursor: pointer;
+}
+
+table {
+	margin: 0 auto;
+}
+
+table, th, td {
+	border: 1px solid rgb(255, 0, 140);
 	border-collapse: collapse;
  	padding: 10px;
 }

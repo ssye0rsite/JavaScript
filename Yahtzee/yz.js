@@ -142,7 +142,7 @@ let diceObj = [
   }
   
   function preRollState() {
-  // Executed every time a score is inputted to the score sheet via the calculationEnd function.
+  // every time a score is inputted to the score sheet via the calculationEnd function.
   // Sets everything up for the user's next roll.
   
     // Disable the hold buttons.
@@ -167,7 +167,7 @@ let diceObj = [
   }
   
   function rollingState() {
-  // Executed on the first roll of a go via the diceRoll function.
+  // on the first roll of a go via the diceRoll function.
   
     // Enables the hold buttons
     for (let i = 0; i < holdButtons.length; i++) {
@@ -236,7 +236,6 @@ let diceObj = [
   }
   
   // Calculates score updates scoreSheet object, HTML.
-  
   function calculateUpper(argA, argB, argC) {
     if (!scoreSubmitted && argA === null) {
       argA = 0;
@@ -436,13 +435,13 @@ let diceObj = [
       upperGrandTotalDisp2.textContent = scoreSheet[2].upperGrandTotal;
     }
   
-    // If all the lower section scores are in, calculate and display the totals 
+    // If all the lower section scores are in, calculate & display the totals 
     if (!isScoreMissingLower) {
       scoreSheet[2].lowerGrandTotal = lowerScoreArray.reduce(reducer);
       lowerGrandTotalDisp.textContent = scoreSheet[2].lowerGrandTotal;
     }
   
-    // If all of the scores are in, calculate and display the final score
+    // If all of the scores are in, calculate & display the final score
     if (scoreSheet[2].upperGrandTotal !== null && scoreSheet[2].lowerGrandTotal !== null) {
       scoreSheet[2].gameGrandTotal = scoreSheet[2].upperGrandTotal + scoreSheet[2].lowerGrandTotal;
       gameGrandTotalDisp.textContent = scoreSheet[2].gameGrandTotal;
