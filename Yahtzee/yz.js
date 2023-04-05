@@ -213,9 +213,9 @@ let diceObj = [
       }
     }
   
-    // Reset the HTML dice to show 1's.
+    // Reset the HTML dice to show ?.
     for (let i = 0; i < diceDisp.length; i++) {
-      diceDisp[i].textContent = "1";
+      diceDisp[i].textContent = "?";
     }
   
     message.textContent = "CLICK ON ROLL";
@@ -414,7 +414,7 @@ let diceObj = [
   
   function totals() {
     // Extract score sheet values into an array
-    let upperScoreArray = Object.values(scoreSheet[1]);
+    let upperScoreArray = Object.values(scoreSheet[2]);
     let lowerScoreArray = Object.values(scoreSheet[1]);
   
     // Check the above arrays for missing scores
@@ -430,24 +430,24 @@ let diceObj = [
       } else {
         scoreSheet[0].bonus = 0;
       }
-      scoreSheet[0].upperGrandTotal = scoreSheet[0].upperTotal + scoreSheet[0].bonus;
+      scoreSheet[2].upperGrandTotal = scoreSheet[2].upperTotal + scoreSheet[2].bonus;
       
-      upperTotalDisp.textContent = scoreSheet[0].upperTotal;
-      bonusDisp.textContent = scoreSheet[0].bonus;
-      upperGrandTotalDisp.textContent = scoreSheet[0].upperGrandTotal;
-      upperGrandTotalDisp2.textContent = scoreSheet[0].upperGrandTotal;
+      upperTotalDisp.textContent = scoreSheet[2].upperTotal;
+      bonusDisp.textContent = scoreSheet[2].bonus;
+      upperGrandTotalDisp.textContent = scoreSheet[2].upperGrandTotal;
+      upperGrandTotalDisp2.textContent = scoreSheet[2].upperGrandTotal;
     }
   
     // If all the lower section scores are in, calculate & display the totals 
     if (!isScoreMissingLower) {
-      scoreSheet[2].lowerGrandTotal = lowerScoreArray.reduce(reducer);
-      lowerGrandTotalDisp.textContent = scoreSheet[2].lowerGrandTotal;
+      scoreSheet[0].lowerGrandTotal = lowerScoreArray.reduce(reducer);
+      lowerGrandTotalDisp.textContent = scoreSheet[0].lowerGrandTotal;
     }
   
     // If all of the scores are in, calculate  display the final score
-    if (scoreSheet[2].upperGrandTotal !== null && scoreSheet[2].lowerGrandTotal !== null) {
-      scoreSheet[2].gameGrandTotal = scoreSheet[2].upperGrandTotal + scoreSheet[2].lowerGrandTotal;
-      gameGrandTotalDisp.textContent = scoreSheet[2].gameGrandTotal;
+    if (scoreSheet[0].upperGrandTotal !== null && scoreSheet[0].lowerGrandTotal !== null) {
+      scoreSheet[0].gameGrandTotal = scoreSheet[0].upperGrandTotal + scoreSheet[0].lowerGrandTotal;
+      gameGrandTotalDisp.textContent = scoreSheet[0].gameGrandTotal;
   
       gameFinished = true;
   
