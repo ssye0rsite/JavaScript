@@ -246,7 +246,6 @@ let diceObj = [
           argA += argB;
         }
       });
-    
       argC.textContent = argA;
       calculationEnd();
     }
@@ -415,7 +414,7 @@ let diceObj = [
   
   function totals() {
     // Extract score sheet values into an array
-    let upperScoreArray = Object.values(scoreSheet[0]);
+    let upperScoreArray = Object.values(scoreSheet[1]);
     let lowerScoreArray = Object.values(scoreSheet[1]);
   
     // Check the above arrays for missing scores
