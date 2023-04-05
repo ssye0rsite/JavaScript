@@ -196,7 +196,7 @@ let diceObj = [
   
     // Reset the score cells on HTML score sheet.
     for (let i = 0; i < scoreCell.length; i++) {
-      scoreCell[i].textContent = "...";
+      scoreCell[i].textContent = "-";
     }
   
     // Reset the total cells on the HTML score sheet.
@@ -218,9 +218,11 @@ let diceObj = [
       diceDisp[i].textContent = "1";
     }
   
-    message.textContent = "PRESS ROLL";
+    message.textContent = "CLICK ON ROLL";
   
     preRollState();
+
+    
   }
   
   //Toggles the hold functionality and applies a new style class if hold is true.
@@ -244,89 +246,12 @@ let diceObj = [
           argA += argB;
         }
       });
-    argC.textContent = argA;
-    calculationEnd();
+    
+      argC.textContent = argA;
+      calculationEnd();
     }
   }
   
-
-  // function calculateOnes() {
-  //   if (!scoreSubmitted && scoreSheet[0].ones === null) {
-  //     scoreSheet[0].ones = 0;
-  //     diceObj.forEach(item => {
-  //       if (item.currentValue === 1) {
-  //         scoreSheet[0].ones += 1;
-  //       }
-  //     });
-  //   onesScoreDisp.textContent = scoreSheet[0].ones;
-  //   calculationEnd(); 
-  //   }
-  // }
-  
-  // function calculateTwos() {
-  //   if (!scoreSubmitted && scoreSheet[0].twos === null) {
-  //     scoreSheet[0].twos = 0;
-  //     diceObj.forEach(item => {
-  //       if (item.currentValue === 2) {
-  //         scoreSheet[0].twos += 2;
-  //       }
-  //     });
-  //   twosScoreDisp.textContent = scoreSheet[0].twos;
-  //   calculationEnd();
-  //   }
-  // }
-  
-  // function calculateThrees() {
-  //   if (!scoreSubmitted && scoreSheet[0].threes === null) {
-  //     scoreSheet[0].threes = 0;
-  //     diceObj.forEach(item => {
-  //       if (item.currentValue === 3) {
-  //         scoreSheet[0].threes += 3;
-  //       }
-  //     });
-  //   threesScoreDisp.textContent = scoreSheet[0].threes;
-  //   calculationEnd(); 
-  //   }
-  // }
-  
-  // function calculateFours() {
-  //   if (!scoreSubmitted && scoreSheet[0].fours === null) {
-  //     scoreSheet[0].fours = 0;
-  //     diceObj.forEach(item => {
-  //       if (item.currentValue === 4) {
-  //         scoreSheet[0].fours += 4;
-  //       }
-  //     });
-  //   foursScoreDisp.textContent = scoreSheet[0].fours;
-  //   calculationEnd();
-  //   }
-  // }
-  
-  // function calculateFives() {
-  //   if (!scoreSubmitted && scoreSheet[0].fives === null) {
-  //     scoreSheet[0].fives = 0;
-  //     diceObj.forEach(item => {
-  //       if (item.currentValue === 5) {
-  //         scoreSheet[0].fives += 5;
-  //       }
-  //     });  
-  //   fivesScoreDisp.textContent = scoreSheet[0].fives;
-  //   calculationEnd();
-  //   }
-  // }
-  
-  // function calculateSixes() { 
-  //   if (!scoreSubmitted && scoreSheet[0].sixes === null) {
-  //     scoreSheet[0].sixes = 0;
-  //     diceObj.forEach(item => {
-  //       if (item.currentValue === 6) {
-  //         scoreSheet[0].sixes += 6;
-  //       }
-  //     });
-  //   sixesScoreDisp.textContent = scoreSheet[0].sixes;
-  //   calculationEnd();
-  //   }
-  // }
 
   
   function calculateThreeOfKind() {
@@ -500,18 +425,18 @@ let diceObj = [
   
     // If all the upper section scores are in, calculate and display the totals 
     if (!isScoreMissingUpper) {
-      scoreSheet[2].upperTotal = upperScoreArray.reduce(reducer);
-      if (scoreSheet[2].upperTotal >= 63) {
-        scoreSheet[2].bonus = 35;
+      scoreSheet[0].upperTotal = upperScoreArray.reduce(reducer);
+      if (scoreSheet[0].upperTotal > 63) {
+        scoreSheet[0].bonus = 35;
       } else {
-        scoreSheet[2].bonus = 0;
+        scoreSheet[0].bonus = 0;
       }
-      scoreSheet[2].upperGrandTotal = scoreSheet[2].upperTotal + scoreSheet[2].bonus;
+      scoreSheet[0].upperGrandTotal = scoreSheet[0].upperTotal + scoreSheet[0].bonus;
       
-      upperTotalDisp.textContent = scoreSheet[2].upperTotal;
-      bonusDisp.textContent = scoreSheet[2].bonus;
-      upperGrandTotalDisp.textContent = scoreSheet[2].upperGrandTotal;
-      upperGrandTotalDisp2.textContent = scoreSheet[2].upperGrandTotal;
+      upperTotalDisp.textContent = scoreSheet[0].upperTotal;
+      bonusDisp.textContent = scoreSheet[0].bonus;
+      upperGrandTotalDisp.textContent = scoreSheet[0].upperGrandTotal;
+      upperGrandTotalDisp2.textContent = scoreSheet[0].upperGrandTotal;
     }
   
     // If all the lower section scores are in, calculate & display the totals 
