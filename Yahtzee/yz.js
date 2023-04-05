@@ -423,7 +423,7 @@ let diceObj = [
     let isScoreMissingLower = lowerScoreArray.includes(null);
     let reducer = (accumulator, current) => accumulator + current;
   
-    // If all the upper section scores are in, calculate and display the totals 
+    // If all the upper section scores are in, calculate and display the totals
     if (!isScoreMissingUpper) {
       scoreSheet[0].upperTotal = upperScoreArray.reduce(reducer);
       if (scoreSheet[0].upperTotal > 63) {
