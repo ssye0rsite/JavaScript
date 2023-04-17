@@ -1,3 +1,5 @@
+// "❌" in the tb, meaning the error in the code of the total score.
+
 let diceObj = [
   {currentValue: 0, hold: false},
   {currentValue: 0, hold: false},
@@ -90,7 +92,7 @@ function diceRoll() {
   }
 
   // Assigns a random number to each dice. If a dice is held, no new number will be assigned.
-  // Pushes the dice values to an array and sorts them numerically. For use in calculating scores.
+  // Pushes the dice values to an array and sorts them by numbers. For use in calculating scores.
   if (rollCount <= 3) {
     diceValueArray = [];
     for (let i = 0; i < diceObj.length; i++) {
@@ -235,6 +237,7 @@ function toggleHold(key, holdElementId) {
 }
 
 // Calculates the score, updates the scoreSheet object and HTML.
+//args being the "any number of values"
 
 function calculateUpper(argA, argB, argC) {
   if (!scoreSubmitted && argA === null) {
