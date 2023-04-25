@@ -1,0 +1,6 @@
+let numbers = [];
+
+for (let i = 0; i < 49; i++) {
+  let randomNum = Math.floor(Math.random() * 901) + 100; // Genereer een random getal tussen 100 en 1000
+  numbers.push(randomNum); // Voeg het gegenereerde getal toe aan de array
+}

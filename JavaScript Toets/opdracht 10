@@ -1,0 +1,2 @@
+let divElements = document.querySelectorAll("div"); // Selecteer alle div-elementen
+console.log(divElements); // Log het resultaat naar de console

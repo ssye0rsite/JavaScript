@@ -1,0 +1,21 @@
+<html>
+<div id="number-list"></div>
+</html>
+
+<script>
+let numbers = [];
+
+for (let i = 0; i < 49; i++) {
+  let randomNum = Math.floor(Math.random() * 901) + 100;
+  numbers.push(randomNum);
+}
+
+let numberList = document.getElementById("number-list");
+
+for (let i = 0; i < numbers.length; i++) {
+  let number = numbers[i];
+  let numberElement = document.createElement("p");
+  numberElement.textContent = number;
+  numberList.appendChild(numberElement);
+}
+</script>
